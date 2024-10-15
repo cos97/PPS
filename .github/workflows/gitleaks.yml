@@ -36,7 +36,7 @@ jobs:
 
     - name: Upload report
       if: failure()
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4  # Cambiado a la versión 4
       with:
         name: gitleaks-report
         path: gitleaks_report.json
