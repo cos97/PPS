@@ -1,2 +1,3 @@
 *.log
 .env
+gitleaks_report.json
