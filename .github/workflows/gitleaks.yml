@@ -3,7 +3,7 @@ name: Gitleaks Scan
 on:
   push:
     branches:
-      - main  # Cambia esto si tu rama principal tiene otro nombre
+      - main
   pull_request:
     branches:
       - main
@@ -19,10 +19,10 @@ jobs:
     - name: Set up Go (for gitleaks)
       uses: actions/setup-go@v2
       with:
-        go-version: '1.22'  # Utiliza la última versión de Go compatible
+        go-version: '1.22'
 
     - name: Install Gitleaks
-      run: go install github.com/zricethezav/gitleaks/v8@latest  # Instala la última versión de Gitleaks
+      run: go install github.com/zricethezav/gitleaks/v8@latest
 
     - name: Run Gitleaks
       run: |
